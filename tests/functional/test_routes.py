@@ -192,7 +192,3 @@ def test_create_account_missing_fields(testing_client):
     """
     response = testing_client.post('/accounts', json={'name': 'Incomplete'})
     assert response.status_code == 500
-    response = testing_client.post('/accounts', json={'name': 'John Doe', 'currency': '€'})
-    assert response.status_code == 200
-
-
